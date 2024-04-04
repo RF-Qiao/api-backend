@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.qarar.springbootinit.mapper.PostMapper">
+<mapper namespace="com.qarar.apibackend.mapper.PostMapper">
 
-    <resultMap id="BaseResultMap" type="com.qarar.springbootinit.model.entity.Post">
+    <resultMap id="BaseResultMap" type="com.qarar.apibackend.model.entity.Post">
         <id property="id" column="id" jdbcType="BIGINT"/>
         <result property="title" column="title" jdbcType="VARCHAR"/>
         <result property="content" column="content" jdbcType="VARCHAR"/>
@@ -23,7 +23,7 @@
         createTime,updateTime,isDelete
     </sql>
 
-    <select id="listPostWithDelete" resultType="com.qarar.springbootinit.model.entity.Post">
+    <select id="listPostWithDelete" resultType="com.qarar.apibackend.model.entity.Post">
         select *
         from post
         where updateTime >= #{minUpdateTime}
