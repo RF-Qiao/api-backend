@@ -4,10 +4,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 
-/**
- * 用户注册请求体
- *
- */
+
 @Data
 public class UserRegisterRequest implements Serializable {
 
@@ -17,5 +14,11 @@ public class UserRegisterRequest implements Serializable {
 
     private String userPassword;
 
+    private String userName;
+
     private String checkPassword;
+
+    private String invitationCode;
+
+    private String agreeToAnAgreement;
 }

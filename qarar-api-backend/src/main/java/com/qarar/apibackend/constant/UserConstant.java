@@ -1,32 +1,38 @@
 package com.qarar.apibackend.constant;
 
-/**
- * 用户常量
- *
- */
+
 public interface UserConstant {
 
     /**
      * 用户登录态键
      */
-    String USER_LOGIN_STATE = "user_login";
+    String USER_LOGIN_STATE = "userLoginState";
+
+    /**
+     * 系统用户 id（虚拟用户）
+     */
+    long SYSTEM_USER_ID = 0;
 
     //  region 权限
 
     /**
-     * 默认角色
+     * 默认权限
      */
     String DEFAULT_ROLE = "user";
 
     /**
-     * 管理员角色
+     * 管理员权限
      */
     String ADMIN_ROLE = "admin";
 
-    /**
-     * 被封号
-     */
-    String BAN_ROLE = "ban";
 
-    // endregion
+    /**
+     * 盐值，混淆密码
+     */
+    String SALT = "qarar";
+    /**
+     * ak/sk 混淆
+     */
+    String VOUCHER = "accessKey_secretKey";
+
 }

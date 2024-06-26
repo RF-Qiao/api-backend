@@ -1,47 +1,36 @@
 package com.qarar.apibackend.model.dto.user;
 
+
 import com.qarar.apibackend.common.PageRequest;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 
-/**
- * 用户查询请求
- *
- */
+
 @EqualsAndHashCode(callSuper = true)
 @Data
 public class UserQueryRequest extends PageRequest implements Serializable {
+    private static final long serialVersionUID = 1L;
     /**
      * id
      */
     private Long id;
-
-    /**
-     * 开放平台id
-     */
-    private String unionId;
-
-    /**
-     * 公众号openId
-     */
-    private String mpOpenId;
-
     /**
      * 用户昵称
      */
     private String userName;
-
     /**
-     * 简介
+     * 账号
      */
-    private String userProfile;
+    private String userAccount;
 
     /**
-     * 用户角色：user/admin/ban
+     * 性别
+     */
+    private String gender;
+    /**
+     * 用户角色: user, admin
      */
     private String userRole;
-
-    private static final long serialVersionUID = 1L;
 }
